@@ -1,7 +1,7 @@
 # Tarvos
 macOS Mojave 10.14.4 on Kaby-Lake XPS9360
 
-# Hardware Information
+## Hardware Information
 - Dell XPS 9360
     - Intel Kabylake i7-7500U with Intel HD620 Integrated Graphics
     - 8GB RAM
@@ -17,7 +17,7 @@ macOS Mojave 10.14.4 on Kaby-Lake XPS9360
     - BIOS Version: 2.12.0. **Not guaranteed if lower BIOS version would work but it is highly possible as long as the BIOS configurations are the same.**
 
 - Result
-    - 11-stage CPU frequency
+    - 11-stage CPU frequency adjustment
     - Touchscreen with multi-touch and perfect graphics
     - WiFi + Bluetooth with Airdrop, iMessage and Continuity supported
         - Wi-Fi device ID `[14e4:43b1]`
@@ -30,8 +30,9 @@ macOS Mojave 10.14.4 on Kaby-Lake XPS9360
     - Support touchpad-click awake and lid-open awake
     - Sound and microphone jack
     - Perfect keyboard with in-built function keys like sound adjustment, media keys, brightness adjustment and keyboard backlight adjustment
+    - APFS file system
 
-# UEFI Adjustments
+## UEFI Adjustments
 
 Launch grub from clover and enter the following commands:
 
@@ -51,7 +52,7 @@ setup_var 0x786 0x03
 | DVMT Pre-allocation   | 0x785  | 0x01 (32M)     | 0x06 (192M)     | Increase DVMT pre-allocated size to 192M for QHD+ displays |
 | DVMT Total Gfx Memory | 0x786  | 0x01 (128M)    | 0x03 (MAX)      | Increase total gfx memory limit to maximum                 |
 
-# BIOS Configurations
+## BIOS Configurations
 - Boot Sequence: Delete All (very important)
 - Sata: AHCI
 - Enable SMART Reporting
@@ -73,7 +74,7 @@ setup_var 0x786 0x03
 - Fastboot: minimal
 - BIOS POST Time: 0s
 - Enable VT
-- **Disable VT-D (!important, otherwise BT and sleep not function)**
+- **Disable VT-D (!important, otherwise BT and sleep not work)**
 - Wireless switch OFF for Wifi and BT
 - Enable Wireless WIFI and BT
 - Allow BIOS Downgrade
@@ -81,7 +82,7 @@ setup_var 0x786 0x03
 - Auto-OS recovery threshold: OFF
 - SupportAssist OS Recovery: OFF
 
-# Post installation
+## Post installation
 Mount the EFI folder of the system, copy and paste the CLOVER folder of the boot USB drive to the system EFI.
 
 Copy the files in the `Extensions` folder of this repo to `/L/E` and rebuild system kext cache with the following commands:
@@ -104,12 +105,12 @@ sudo chflags uchg /private/var/vm/sleepimage
 
 This should make your sleep perfect.
 
-# Intel Power Gadget Snapshots
+## Intel Power Gadget Snapshots
 
 <p align="center">
   <img src="https://github.com/GeraltShi/Tarvos/blob/master/cpu_snapshot.png" width="300" alt="snapshot">
 </p>
 
-# Credits
+## Credits
 - [the-darkvoid/XPS9360-macOS](https://github.com/the-darkvoid/XPS9360-macOS)
 - All credits mentioned in the repo above
