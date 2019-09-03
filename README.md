@@ -14,16 +14,16 @@ macOS Mojave 10.14.4 on Kaby-Lake XPS9360
     - 2 USB 3.0 Ports
 
 - Firmware Version
-    - BIOS Version: 2.12.0
+    - BIOS Version: 2.12.0. **Not guaranteed if lower BIOS version would work but it is highly possible as long as the BIOS configurations are the same.**
 
 - Result
     - 11-stage CPU frequency
     - Touchscreen with multi-touch and perfect graphics
     - WiFi + Bluetooth with Airdrop, iMessage and Continuity supported
-        - Wi-Fi device ID [14e4:43b1]
-        - Bluetooth device ID [0a5c:216f], using BrcmPatchRAM2.kext
+        - Wi-Fi device ID `[14e4:43b1]`
+        - Bluetooth device ID `[0a5c:216f]`, using `BrcmPatchRAM2.kext`
     - Touchpad (super precise, very close to original experience except force touch. Two-finger, three-finger, and four-finger gestures in-built and supported)
-    - USB 3.0 + thunderbolt 3
+    - USB 3.0 + Thunderbolt 3
     - External Monitor - Tested with `Dell S2417H 24'' 1080p`
     - Perfect sleep after banning hibernation
     - Support lid-close sleep, ->sleep
@@ -73,7 +73,7 @@ setup_var 0x786 0x03
 - Fastboot: minimal
 - BIOS POST Time: 0s
 - Enable VT
-- Disable VT-D (important, otherwise BT not function)
+- **Disable VT-D (!important, otherwise BT and sleep not function)**
 - Wireless switch OFF for Wifi and BT
 - Enable Wireless WIFI and BT
 - Allow BIOS Downgrade
@@ -111,5 +111,5 @@ This should make your sleep perfect.
 </p>
 
 # Credits
-- [XPS9360-macOS](https://github.com/the-darkvoid/XPS9360-macOS)
+- [the-darkvoid/XPS9360-macOS](https://github.com/the-darkvoid/XPS9360-macOS)
 - All credits mentioned in the repo above
