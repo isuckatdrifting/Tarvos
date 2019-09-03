@@ -107,8 +107,11 @@ This should make your sleep perfect.
 
 ## Intel Power Gadget Snapshots
 
+CPU states in high-performance and idle.
+
 <p align="center">
-  <img src="https://github.com/GeraltShi/Tarvos/blob/master/cpu_snapshot.png" width="300" alt="snapshot">
+  <img src="https://github.com/GeraltShi/Tarvos/blob/master/cpu_snapshot.png" width="300" alt="High performance">
+  <img src="https://github.com/GeraltShi/Tarvos/blob/master/cpu_snapshot_idle.png" width="300" alt="Idle">
 </p>
 
 ## Credits
