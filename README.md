@@ -3,7 +3,7 @@ macOS Mojave 10.14.4 on Kaby-Lake XPS9360
 
 # Hardware Information
 - Dell XPS 9360
-    - Kabylake i7-7500U
+    - Intel Kabylake i7-7500U with Intel HD620 Integrated Graphics
     - 8GB RAM
     - Sharp `SHP144` `LQ133Z1` QHD+ (3200x1800) Touchscreen display
     - Samsung 960 Pro 512GB SSD
@@ -84,7 +84,7 @@ setup_var 0x786 0x03
 # Post installation
 Mount the EFI folder of the system, copy and paste the CLOVER folder of the boot USB drive to the system EFI.
 
-Copy the files in the /L/E folder of this repo to /L/E and rebuild system kext cache with the following commands:
+Copy the files in the `Extensions` folder of this repo to `/L/E` and rebuild system kext cache with the following commands:
 
 ```
 sudo cp -R *.kext /Library/Extensions
@@ -103,6 +103,12 @@ sudo chflags uchg /private/var/vm/sleepimage
 ```
 
 This should make your sleep perfect.
+
+# Intel Power Gadget Snapshots
+
+<p align="center">
+  <img src="https://github.com/GeraltShi/Tarvos/blob/master/cpu_snapshot.png" width="300" alt="snapshot">
+</p>
 
 # Credits
 - [XPS9360-macOS](https://github.com/the-darkvoid/XPS9360-macOS)
